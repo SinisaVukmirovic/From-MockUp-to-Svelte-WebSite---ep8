@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Herr+Von+Muellerhoff&display=swap');
+
+:root {
+	--theme-color: #c79b5e;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	color: #333;
+	font-family: Tahoma, sans-serif;
+}
+
+/* GENERAL STYLES */
+h2.cursive {
+	text-transform: none;
+	font-family: 'Herr Von Muellerhoff', cursive;
+	color: var(--theme-color);
+	font-size: 7.5rem;
+	font-weight: normal;
+	margin-bottom: -.5em;
+}
+
+h3 {
+	text-transform: uppercase;
+}
+
+/* Section styles */
+section {
+	color: #777;
+	display: flex;
+	justify-content: space-between;
+	padding: 5em 10%;
+}
+	section .text,
+	section .pic {
+		width: 50%;
+	}
+	section .text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 0 4em;
+	}
+		.text p {
+			line-height: 1.5;
+		}
+
+	section .pic img {
+		width: 100%;
+	}
+
+	section h2 {
+		color: #333;
+		font-size: 2.5rem;
+		text-transform: uppercase;
+		letter-spacing: 10px;
+	}
+	section h2.cursive {
+		color: var(--theme-color);
+		letter-spacing: 0px;
+	}
+	section span {
+		color: #777;
+		margin: 1em;
+	}
+	section a {
+		color: var(--theme-color);
+		text-transform: uppercase;
+		text-decoration: none;
+		margin-top: 1.5em;
+		letter-spacing: 3px;
+		border-bottom: 2px solid var(--theme-color);
+	}
+
+/* Parallax styles */
+.parallax {
+	width: 100%;
+	height: 70vh;
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #eee;
+	font-size: 1.75rem;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+}
+	.parallax .cursive {
+		letter-spacing: 0px;
+	}
+
+@media only screen and (max-width: 1024px) {
+	html {
+		font-size: 14px;
+	}
+
+	h2.cursive {
+		font-size: 5rem;
+	}
+	section .text {
+		padding: 0 2.5em;
+	}
+	section h2 {
+		font-size: 2rem;
+	}
+
+	.parallax {
+		height: 60vh;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 12px;
+	}
+
+	h2.cursive {
+		font-size: 4rem;
+	}
+
+	section {
+		flex-direction: column;
+	}
+		section .text,
+		section .pic {
+			width: 100%;
+		}
+		section .text {
+			padding: 0 1em;
+		}
+		section h2 {
+			font-size: 1.5rem;
+			letter-spacing: 5px;
+		}
+
+	.parallax {
+		height: 50vh;
+	}
+}
+
+@media only screen and (max-height: 414px) {
+	.parallax {
+		height: 90vh;
+	}
+}
