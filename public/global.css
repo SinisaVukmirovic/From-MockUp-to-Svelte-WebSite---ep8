@@ -122,6 +122,20 @@ section {
 	}
 }
 
+/* Custom scroll bars style */
+::-webkit-scrollbar {
+    width: 5px;
+    background: #333;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--theme-color);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #eee; 
+}
+
 @media only screen and (max-width: 768px) {
 	html {
 		font-size: 12px;
